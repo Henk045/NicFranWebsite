@@ -275,9 +275,10 @@ html {
 }
 
 .photo-gallery img {
-    width: 100%;
+    width: 60%;
     padding: 0px;
 }
+
 
 @media screen and (max-width: 600px) {
     .footer {
@@ -492,6 +493,11 @@ footer img {
         padding: 20px; /* Vermindert de padding rondom de main content op kleinere schermen */
     }
 }
+
+
+
+
+
 
 
 
