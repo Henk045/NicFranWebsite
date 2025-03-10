@@ -204,7 +204,7 @@ html {
 .footer .logo {
     position: absolute;
     left: 10px; /* Moved 10px to the left */
-    top: 10px;
+    top: 5px; /* Moved 5px down */
     z-index: 0;
     opacity: 1.0;
     pointer-events: none;
