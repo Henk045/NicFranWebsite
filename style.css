@@ -316,9 +316,9 @@ html {
         border-top: 2px solid var(--secondary-color);
     }
 
-    .footer .logo {
-        display: none; /* Hide logo on small screens */
-    }
+    /* .footer .logo { */
+        /* display: none; Hide logo on small screens */
+    /* } */
 
     .footer .left, .footer .right {
         align-items: center;
