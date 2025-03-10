@@ -298,9 +298,9 @@ html {
         border-top: 2px solid var(--secondary-color);
     }
 
-    /* .footer .logo {
+    .footer .logo {
         display: none;
-    } */
+    }
 }
 
 @media screen and (max-width: 800px) {
@@ -316,9 +316,9 @@ html {
         border-top: 2px solid var(--secondary-color);
     }
 
-    /* .footer .logo { */
-        /* display: none; Hide logo on small screens */
-    /* } */
+    .footer .logo {
+        display: none; /* Hide logo on small screens */
+    }
 
     .footer .left, .footer .right {
         align-items: center;
@@ -331,7 +331,7 @@ html {
     }
 }
 
-/* @media screen and (max-width: 1314px) {
+@media screen and (max-width: 1314px) {
     .header .logo {
         display: none;
     }
@@ -339,7 +339,7 @@ html {
     .footer .logo {
         display: none;
     }
-} */
+}
 
 header {
     background-color: var(--primary-color); /* Achtergrondkleur van de header */
