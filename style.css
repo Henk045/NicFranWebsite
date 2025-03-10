@@ -1,0 +1,493 @@
+/* variables */
+:root {
+    --primary-color: #007a83; /* Dark blue */
+    --secondary-color: #19f5c9; /* Green */
+    --background-color: #ecf0f1; /* Light grey */
+    --text-color: #2c3e50; /* Dark blue */
+    --accent-color: #2600ff; /* Red */
+    --border-radius: 8px;
+    --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+body {
+    display: flex;
+    flex-direction: column; /* Stack body content vertically */
+    min-height: 100vh; /* Ensure the body takes at least the full viewport height */
+    margin: 0;
+    background-color: var(--background-color);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: var(--text-color);
+}
+
+.topnav {
+    background-color: var(--primary-color);
+    overflow: hidden;
+    text-align: center;
+    position: unset;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: top 0.3s ease-in-out;
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+.fixed {
+    position: fixed !important;
+    top: 0;
+    width: 100%;
+}
+
+.topnav a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    border-bottom-left-radius: var(--border-radius);
+    border-bottom-right-radius: var(--border-radius);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.topnav a:hover {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.topnav a.active {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.content {
+    padding: 20px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.85);
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto 0 auto;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    transition: padding-top 0.3s ease-in-out;
+    flex-grow: 1;
+}
+
+.content.fixed-padding {
+    padding-top: 60px;
+}
+
+.content a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.button {
+    align-items: center;
+    background-color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-flex;
+    fill: #fff;
+    font-family: Inter, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    height: 48px;
+    justify-content: center;
+    min-width: 140px;
+    outline: 0;
+    padding: 0 17px;
+    text-align: center;
+    transition: all 0.3s;
+    margin-bottom: 10px;
+}
+
+.button:focus {
+    color: var(--secondary-color);
+}
+
+.button:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    background-color: #fff;
+    fill: var(--primary-color);
+}
+
+.button:active {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    fill: var(--primary-color);
+}
+
+@media (min-width: 768px) {
+    .button {
+        min-width: 170px;
+    }
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(0deg, var(--primary-color), #34495e);
+    color: white;
+    padding: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: var(--box-shadow);
+    user-select: none;
+}
+
+.header .header--content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+
+.header .logo {
+    position: absolute;
+    left: 10px;
+    padding: 10px;
+    top: 20px;
+    pointer-events: none;
+}
+
+.full-width {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.75);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 4;
+    transition: transform 0.3s ease-in-out;
+}
+
+.full-width img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    transform: scale(1.2);
+}
+
+html {
+    overflow-x: hidden !important;
+}
+
+.footer {
+    background-color: var(--primary-color);
+    color: #fff;
+    text-align: center;
+    padding: 20px 10px;
+    bottom: 0;
+    width: 100%;
+    margin-top: 20px;
+    border-top: 2px solid var(--secondary-color);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 40px;
+    position: relative;
+    z-index: 1000;
+}
+
+.footer .logo {
+    position: absolute;
+    left: 20px;
+    top: 10px;
+    z-index: 0;
+    opacity: 1.0;
+    pointer-events: none;
+    width: 80px;
+    height: auto;
+}
+
+.footer .left, .footer .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex: 0 0 auto;
+    max-width: 200px;
+    gap: 5px;
+    position: relative;
+    padding-top: 0px;
+    left: 65px;
+}
+
+.footer p, .footer a {
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.footer a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: var(--secondary-color);
+}
+
+.footer i {
+    margin-right: 8px;
+    color: var(--accent-color);
+    font-size: 14px;
+}
+
+.footer .right a {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.social-media a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: 18px;
+}
+
+.social-media a:hover {
+    color: var(--secondary-color);
+}
+
+.social-media i {
+    margin-right: 8px;
+    color: var(--accent-color);
+    font-size: 16px;
+}
+
+.photo-gallery img {
+    width: 45%;
+    padding: 10px;
+}
+
+@media screen and (max-width: 600px) {
+    .footer {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .footer .left, .footer .right {
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer {
+        display: block;
+        text-align: center;
+        width: 100%;
+        margin-top: 20px;
+        border-top: 2px solid var(--secondary-color);
+    }
+
+    .footer .logo {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .footer {
+        display: flex; /* Keep it as a flex container */
+        flex-direction: column; /* Stack items vertically */
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+        gap: 20px; /* Add some space between the sections */
+        text-align: center;
+        width: unset;
+        margin-top: 20px;
+        border-top: 2px solid var(--secondary-color);
+    }
+
+    .footer .logo {
+        display: none; /* Hide logo on small screens */
+    }
+
+    .footer .left, .footer .right {
+        align-items: center;
+        text-align: center;
+    }
+
+    .topnav a {
+        padding: 10px;
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 1314px) {
+    .header .logo {
+        display: none;
+    }
+
+    .footer .logo {
+        display: none;
+    }
+}
+
+header {
+    background-color: var(--primary-color); /* Achtergrondkleur van de header */
+    color: #fff; /* Tekstkleur van de header */
+    padding: 20px 0; /* Padding boven en onder de header */
+    text-align: center; /* Centreert de tekst in de header */
+    border-bottom: 4px solid var(--secondary-color); /* Onderste rand van de header */
+    box-shadow: var(--box-shadow); /* Schaduw van de header */
+    position: sticky; /* Zorgt ervoor dat de header blijft plakken aan de bovenkant bij scrollen */
+    top: 0; /* Plaatst de header aan de bovenkant van de pagina */
+    z-index: 1000; /* Zorgt ervoor dat de header boven andere elementen ligt */
+}
+
+header h1 {
+    margin: 0; /* Verwijdert standaard marge van de h1 */
+    font-size: 2.5em; /* Lettergrootte van de h1 */
+    letter-spacing: 1px; /* Ruimte tussen de letters */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* Schaduw van de tekst */
+    font-weight: 700; /* Dikte van de tekst */
+}
+
+.logo img {
+    width: 200px; /* Pas de breedte aan naar wens */
+    height: auto; /* Zorgt ervoor dat de hoogte proportioneel blijft */
+    top: 5px; /* Verplaatst het logo naar beneden */
+    /* changes logo position to the left */
+    left: 5px;
+    position: absolute;
+}
+
+main {
+    padding: 40px; /* Padding rondom de main content */
+    max-width: 1200px; /* Maximale breedte van de main content */
+    margin: 80px auto; /* Centreert de main content en geeft marge boven en onder */
+    background-color: #fff; /* Achtergrondkleur van de main content */
+    border-radius: var(--border-radius); /* Afgeronde hoeken ingesteld via variabele */
+    box-shadow: var(--box-shadow); /* Schaduw van de main content */
+}
+
+main h2 {
+    color: var(--primary-color); /* Kleur van de h2 */
+    font-size: 2em; /* Lettergrootte van de h2 */
+    margin-bottom: 20px; /* Marge onder de h2 */
+    border-bottom: 2px solid var(--secondary-color); /* Onderste rand van de h2 */
+    padding-bottom: 10px; /* Padding onder de h2 */
+}
+
+main p {
+    font-size: 1.1em; /* Lettergrootte van de paragrafen */
+    margin-bottom: 20px; /* Marge onder de paragrafen */
+}
+
+ul {
+    list-style-type: disc; /* Opsommingsteken voor de lijst */
+    padding-left: 20px; /* Padding links van de lijst */
+}
+
+ul li {
+    background-color:#007a8331 ;/* Achtergrondkleur van de lijstitems */
+    margin-bottom: 10px; /* Marge onder de lijstitems */
+    padding: 15px; /* Padding rondom de lijstitems */
+    border-left: 5px solid var(--secondary-color); /* Linker rand van de lijstitems */
+    border-radius: var(--border-radius); /* Afgeronde hoeken ingesteld via variabele */
+    box-shadow: var(--box-shadow); /* Schaduw van de lijstitems */
+    transition: var(--transition); /* Overgangseffect ingesteld via variabele */
+}
+
+ul li:hover {
+    transform: translateY(-5px); /* Verplaatst het lijstitem omhoog bij hover */
+}
+
+footer {
+    background-color: var(--primary-color); /* Achtergrondkleur van de footer */
+    color: #fff; /* Tekstkleur van de footer */
+    text-align: center; /* Centreert de tekst in de footer */
+    padding: 15px 0; /* Padding boven en onder de footer */
+    position: fixed; /* Zorgt ervoor dat de footer blijft plakken aan de onderkant */
+    bottom: 0; /* Plaatst de footer aan de onderkant van de pagina */
+    width: 100%; /* Zorgt ervoor dat de footer de volledige breedte inneemt */
+    box-shadow: var(--box-shadow); /* Schaduw van de footer */
+}
+
+footer p {
+    margin: 0; /* Verwijdert standaard marge van de paragrafen in de footer */
+}
+
+footer a {
+    color: #fff; /* Kleur van de links in de footer */
+    text-decoration: none; /* Verwijdert standaard onderstreping van de links */
+}
+
+footer a:hover {
+    text-decoration: underline; /* Onderstreept de links bij hover */
+    color: var(--accent-color); /* Verandert de kleur van de links bij hover */
+}
+
+footer img {
+    width: 250px; /* Pas de breedte van de afbeelding aan */
+    height: auto; /* Zorgt ervoor dat de hoogte proportioneel blijft */
+    position: absolute; /* Positioneert de afbeelding absoluut */
+    left: 10px; /* Plaatst de afbeelding 10px van de linkerkant */
+}
+
+.nav-bar {
+    background-color: var(--primary-color); /* Achtergrondkleur van de navigatiebalk */
+    padding: 15px; /* Padding rondom de navigatiebalk */
+    display: flex; /* Flexbox layout voor de navigatiebalk */
+    justify-content: space-between; /* Verdeelt de ruimte tussen de items */
+    align-items: center; /* Centreert de items verticaal */
+    box-shadow: var(--box-shadow); /* Schaduw van de navigatiebalk */
+    position: sticky; /* Zorgt ervoor dat de navigatiebalk blijft plakken aan de bovenkant bij scrollen */
+    top: 0; /* Plaatst de navigatiebalk aan de bovenkant van de pagina */
+    z-index: 1000; /* Zorgt ervoor dat de navigatiebalk boven andere elementen ligt */
+}
+
+.nav-bar a {
+    display: flex; /* Flexbox layout voor de links */
+    align-items: center; /* Centreert de links verticaal */
+    color: #fff; /* Kleur van de links */
+    text-decoration: none; /* Verwijdert standaard onderstreping van de links */
+    margin-left: 10px; /* Ruimte tussen de links */
+    font-weight: 500; /* Dikte van de tekst */
+    transition: var(--transition); /* Overgangseffect ingesteld via variabele */
+}
+
+.nav-bar a:first-child {
+    margin-left: 0; /* Verwijdert de linkermarge voor het eerste item */
+}
+
+.nav-bar a:hover {
+    text-decoration: underline; /* Onderstreept de links bij hover */
+    color: var(--accent-color); /* Verandert de kleur van de links bij hover */
+}
+
+.nav-bar a.active {
+    font-weight: 700; /* Dikte van de tekst voor actieve links */
+}
+
+@media (max-width: 768px) {
+    .nav-bar {
+        flex-direction: column; /* Zet de navigatiebalk items onder elkaar op kleinere schermen */
+    }
+
+    .nav-bar a {
+        margin: 10px 0; /* Ruimte tussen de links op kleinere schermen */
+    }
+
+    main {
+        padding: 20px; /* Vermindert de padding rondom de main content op kleinere schermen */
+    }
+}
