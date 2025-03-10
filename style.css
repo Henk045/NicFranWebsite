@@ -207,7 +207,7 @@ html {
 
 .footer .logo {
     position: absolute;
-    left: 20px;
+    left: 10px; /* Moved 10px to the left */
     top: 10px;
     z-index: 0;
     opacity: 1.0;
@@ -297,6 +297,8 @@ html {
     .footer .logo {
         display: block;
         margin-bottom: 20px;
+        top: 40px; /* Move the logo further down */
+        left: -5px ; /* Move the logo a little bit to the left */
     }
 }
 
@@ -313,10 +315,6 @@ html {
         border-top: 2px solid var(--secondary-color);
     }
 
-    .footer .logo {
-        display: none; /* Hide logo on small screens */
-    }
-
     .footer .left, .footer .right {
         align-items: center;
         text-align: center;
@@ -330,11 +328,17 @@ html {
 
 @media screen and (max-width: 1314px) {
     .header .logo {
-        display: none;
+        display: block;
+        left: 125px; /* Move more to the left */
+        top: 10px; /* Move a bit up */
     }
 
     .footer .logo {
-        display: none;
+        display: block;
+    }
+
+    .header h1 {
+        visibility: hidden; /* Hide the header text without removing the element */
     }
 }
 
