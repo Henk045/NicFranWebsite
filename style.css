@@ -208,7 +208,7 @@ html {
 .footer .logo {
     position: absolute;
     left: 20px;
-    top: 0px;
+    top: 10px;
     z-index: 0;
     opacity: 1.0;
     pointer-events: none;
@@ -283,6 +283,10 @@ html {
     .footer {
         flex-direction: column;
         gap: 30px;
+        text-align: center;
+        width: 100%;
+        margin-top: 20px;
+        border-top: 2px solid var(--secondary-color);
     }
 
     .footer .left, .footer .right {
@@ -290,16 +294,9 @@ html {
         text-align: center;
     }
 
-    .footer {
-        display: block;
-        text-align: center;
-        width: 100%;
-        margin-top: 20px;
-        border-top: 2px solid var(--secondary-color);
-    }
-
     .footer .logo {
-        display: none;
+        display: block;
+        margin-bottom: 20px;
     }
 }
 
