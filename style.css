@@ -208,8 +208,7 @@ html {
 .footer .logo {
     position: absolute;
     left: 20px;
-    top: 10px;
-    bottom: 10px;
+    top: 0px;
     z-index: 0;
     opacity: 1.0;
     pointer-events: none;
