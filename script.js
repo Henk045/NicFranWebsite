@@ -15,7 +15,6 @@ window.addEventListener("scroll", function () {
     }
 });
 
-
 const toggleFullScreen = (photoFrame) => {
     const isFullScreen = photoFrame.classList.toggle("full-width");
     document.body.style.overflow = isFullScreen ? "hidden" : "";
@@ -58,3 +57,32 @@ if (window.innerWidth < 768) {
         photoFrame.addEventListener("click", () => toggleFullScreenPhone(photoFrame));
     });
 }
+
+const photos = document.querySelectorAll('.photo');
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+let currentPhotoIndex;
+
+photos.forEach((photo, index) => {
+    photo.addEventListener('click', () => {
+        lightbox.style.display = 'flex';
+        lightboxImg.src = photo.src;
+        currentPhotoIndex = index;
+    });
+});
+
+function changePhoto(direction) {
+    currentPhotoIndex += direction;
+    if (currentPhotoIndex < 0) {
+        currentPhotoIndex = photos.length - 1;
+    } else if (currentPhotoIndex >= photos.length) {
+        currentPhotoIndex = 0;
+    }
+    lightboxImg.src = photos[currentPhotoIndex].src;
+}
+
+lightbox.addEventListener('click', (e) => {
+    if (e.target !== lightboxImg && !e.target.classList.contains('arrow')) {
+        lightbox.style.display = 'none';
+    }
+});

@@ -1,5 +1,4 @@
-/* variables */
-/* variables */
+
 :root {
     --primary-color: #004d66;
     --secondary-color: #33ffcc;
@@ -11,7 +10,6 @@
     --transition: all 0.3s ease;
     --fade-color: linear-gradient(to bottom, #00798f, #004d66 );
   }
-  
   
   body {
     display: flex;
@@ -33,7 +31,7 @@
     text-align: center;
     position: unset;
     top: 0;
-    width: 100vw; /* Use the full width of the page */
+    width: 100vw; 
     z-index: 1000;
     transition: top 0.3s ease-in-out;
     border-bottom: 2px solid var(--secondary-color);
@@ -142,7 +140,7 @@
     font-weight: bold;
     box-shadow: var(--box-shadow);
     user-select: none;
-    width: 100%; /* Use the full width of the page */
+    width: 100%; 
   }
   
   .header .header--content {
@@ -150,7 +148,7 @@
     align-items: center;
     justify-content: center;
     flex: 1;
-    width: 100%; /* Ensure the content also uses the full width */
+    width: 100%; 
   }
   
   .header .logo {
@@ -417,22 +415,53 @@
     font-weight: 700;
   }
   
+  .lightbox {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+  }
+  .lightbox img {
+    max-width: 90%;
+    max-height: 80%;
+  }
+  .lightbox .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+  }
+  .lightbox .arrow.left {
+    left: 10px;
+  }
+  .lightbox .arrow.right {
+    right: 10px;
+  }
+
   @media (max-width: 768px) {
     .topnav {
-        width: 100vw; /* Ensure the top navigation bar uses the full viewport width */
+        width: 100vw; 
     }
   
     .nav-bar {
-        flex-direction: column; /* Stack navigation bar items vertically on smaller screens */
-        width: 100vw; /* Ensure the nav bar uses the full viewport width */
+        flex-direction: column;
+        width: 100vw;
     }
   
     .nav-bar a {
-        margin: 10px 0; /* Space between links on smaller screens */
+        margin: 10px 0; 
     }
   
     main {
-        padding: 20px; /* Reduce padding around main content on smaller screens */
+        padding: 20px; 
     }
   }
   
@@ -459,8 +488,8 @@
     .footer .logo {
         display: block;
         margin-bottom: 20px;
-        top: 40px; /* Move the logo further down */
-        left: -5px; /* Move the logo a little bit to the left */
+        top: 40px; 
+        left: -5px; 
     }
   
     .topnav a {
@@ -470,18 +499,18 @@
   
     .header .logo {
         display: block;
-        left: 125px; /* Move more to the left */
-        top: 10px; /* Move a bit up */
+        left: 125px;
+        top: 10px; 
     }
   
     .header h1 {
-        visibility: hidden; /* Hide the header text without removing the element */
+        visibility: hidden;
     }
   }
   
   @media (max-width: 600px) {
     .footer {
-        position: relative; /* Change position to relative */
+        position: relative; 
         flex-direction: column;
         gap: 30px;
         text-align: center;
@@ -499,19 +528,19 @@
     .footer .logo {
         display: block;
         margin-bottom: 20px;
-        top: 25px; /* Move the logo further down */
-        left: 15px; /* Move the logo a little bit to the left */
+        top: 25px; 
+        left: 15px; 
     }
   }
   
   @media (max-width: 800px) {
     .footer {
-        flex-direction: column; /* Stack items vertically */
-        justify-content: center; /* Center horizontally */
-        align-items: center; /* Center vertically */
-        gap: 20px; /* Add some space between the sections */
+        flex-direction: column; 
+        justify-content: center; 
+        align-items: center; 
+        gap: 20px; 
         text-align: center;
-        width: 100%; /* Ensure full width */
+        width: 100%; 
         margin-top: 20px;
         border-top: 2px solid var(--secondary-color);
     }
@@ -531,8 +560,8 @@
   @media (max-width: 1314px) {
     .header .logo {
         display: block;
-        left: 125px; /* Move more to the left */
-        top: 10px; /* Move a bit up */
+        left: 125px; 
+        top: 10px; 
     }
   
     .footer .logo {
@@ -540,21 +569,21 @@
     }
   
     .header h1 {
-        visibility: hidden; /* Hide the header text without removing the element */
+        visibility: hidden; 
     }
   }
   
   @media (max-width: 1024px) {
       .topnav {
-          width: 100vw; /* Ensure the top navigation bar uses the full viewport width */
+          width: 100vw; 
       }
   
       .header {
-          width: 100vw; /* Ensure the header uses the full viewport width */
+          width: 100vw; 
       }
   
       .footer {
-          width: 100vw; /* Ensure the footer uses the full viewport width */
+          width: 100vw; 
       }
   }
   
