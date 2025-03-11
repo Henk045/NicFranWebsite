@@ -1,48 +1,48 @@
 /* variables */
 :root {
-    --primary-color: #004d66; /* Darker blue */
-    --secondary-color: #33ffcc; /* Brighter green */
-    --background-color: #ffffff; /* White */
-    --text-color: #000000; /* Black */
-    --accent-color: #ffffff; /* Bright orange */
+    --primary-color: #004d66;
+    --secondary-color: #33ffcc;
+    --background-color: #ffffff;
+    --text-color: #000000;
+    --accent-color: #ffffff;
     --border-radius: 8px;
     --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     --transition: all 0.3s ease;
-}
-
-body {
+  }
+  
+  body {
     display: flex;
-    flex-direction: column; /* Stack body content vertically */
-    min-height: 100vh; /* Ensure the body takes at least the full viewport height */
+    flex-direction: column;
+    min-height: 100vh;
     margin: 0;
     background-color: var(--background-color);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     background-position: center 5px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: "Verdana", "Geneva", "Tahoma", sans-serif;
     color: var(--text-color);
-}
-
-.topnav {
+  }
+  
+  .topnav {
     background-color: var(--primary-color);
     overflow: hidden;
     text-align: center;
     position: unset;
     top: 0;
-    width: 100%;
+    width: 100vw; /* Use the full width of the page */
     z-index: 1000;
     transition: top 0.3s ease-in-out;
     border-bottom: 2px solid var(--secondary-color);
-}
-
-.fixed {
+  }
+  
+  .fixed {
     position: fixed !important;
     top: 0;
     width: 100%;
-}
-
-.topnav a {
+  }
+  
+  .topnav a {
     display: inline-block;
     color: white;
     text-align: center;
@@ -52,19 +52,19 @@ body {
     border-bottom-left-radius: var(--border-radius);
     border-bottom-right-radius: var(--border-radius);
     transition: background-color 0.3s, color 0.3s;
-}
-
-.topnav a:hover {
+  }
+  
+  .topnav a:hover {
     background-color: var(--secondary-color);
     color: white;
-}
-
-.topnav a.active {
+  }
+  
+  .topnav a.active {
     background-color: var(--secondary-color);
     color: white;
-}
-
-.content {
+  }
+  
+  .content {
     padding: 20px;
     text-align: center;
     background-color: rgba(255, 255, 255, 0.85);
@@ -75,19 +75,19 @@ body {
     box-shadow: var(--box-shadow);
     transition: padding-top 0.3s ease-in-out;
     flex-grow: 1;
-}
-
-.content.fixed-padding {
+  }
+  
+  .content.fixed-padding {
     padding-top: 60px;
-}
-
-.content a {
+  }
+  
+  .content a {
     color: var(--primary-color);
     text-decoration: none;
     transition: color 0.3s ease;
-}
-
-.button {
+  }
+  
+  .button {
     align-items: center;
     background-color: var(--primary-color);
     border: 2px solid var(--primary-color);
@@ -96,7 +96,7 @@ body {
     cursor: pointer;
     display: inline-flex;
     fill: #fff;
-    font-family: Inter, sans-serif;
+    font-family: "Inter", sans-serif;
     font-size: 16px;
     font-weight: 600;
     height: 48px;
@@ -107,28 +107,26 @@ body {
     text-align: center;
     transition: all 0.3s;
     margin-bottom: 10px;
-}
-
-.button:focus {
+  }
+  
+  .button:focus {
     color: var(--secondary-color);
-}
-
-.button:hover {
+  }
+  
+  .button:hover {
     border-color: var(--primary-color);
     color: var(--primary-color);
     background-color: #fff;
     fill: var(--primary-color);
-}
-
-.button:active {
+  }
+  
+  .button:active {
     border-color: var(--primary-color);
     color: var(--primary-color);
     fill: var(--primary-color);
-}
-
-
-
-.header {
+  }
+  
+  .header {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -136,29 +134,31 @@ body {
     background: linear-gradient(0deg, var(--primary-color), #34495e);
     color: white;
     padding: 10px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: "Verdana", "Geneva", "Tahoma", sans-serif;
     font-size: 16px;
     font-weight: bold;
     box-shadow: var(--box-shadow);
     user-select: none;
-}
-
-.header .header--content {
+    width: 100%; /* Use the full width of the page */
+  }
+  
+  .header .header--content {
     display: flex;
     align-items: center;
     justify-content: center;
     flex: 1;
-}
-
-.header .logo {
+    width: 100%; /* Ensure the content also uses the full width */
+  }
+  
+  .header .logo {
     position: absolute;
     left: 10px;
     padding: 10px;
     top: 20px;
     pointer-events: none;
-}
-
-.full-width {
+  }
+  
+  .full-width {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -170,20 +170,20 @@ body {
     left: 0;
     z-index: 4;
     transition: transform 0.3s ease-in-out;
-}
-
-.full-width img {
+  }
+  
+  .full-width img {
     max-width: 90%;
     max-height: 90%;
     object-fit: contain;
     transform: scale(1.2);
-}
-
-html {
+  }
+  
+  html {
     overflow-x: hidden !important;
-}
-
-.footer {
+  }
+  
+  .footer {
     background-color: var(--primary-color);
     color: #fff;
     text-align: center;
@@ -199,20 +199,21 @@ html {
     gap: 40px;
     position: sticky;
     z-index: 1000;
-}
-
-.footer .logo {
+  }
+  
+  .footer .logo {
     position: absolute;
-    left: 10px; /* Moved 10px to the left */
-    top: 5px; /* Moved 5px down */
+    left: 10px;
+    top: 5px;
     z-index: 0;
-    opacity: 1.0;
+    opacity: 1;
     pointer-events: none;
     width: 80px;
     height: auto;
-}
-
-.footer .left, .footer .right {
+  }
+  
+  .footer .left,
+  .footer .right {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -223,318 +224,333 @@ html {
     position: relative;
     padding-top: 0px;
     left: 65px;
-}
-
-.footer p, .footer a {
+  }
+  
+  .footer p,
+  .footer a {
     margin: 0;
     font-size: 12px;
     line-height: 1.5;
-}
-
-.footer a {
+  }
+  
+  .footer a {
     color: var(--accent-color);
     text-decoration: none;
     transition: color 0.3s ease;
-}
-
-.footer a:hover {
+  }
+  
+  .footer a:hover {
     color: var(--secondary-color);
-}
-
-.footer i {
+  }
+  
+  .footer i {
     margin-right: 8px;
     color: var(--accent-color);
     font-size: 14px;
-}
-
-.footer .right a {
+  }
+  
+  .footer .right a {
     display: flex;
     align-items: center;
     gap: 5px;
-}
-
-.social-media a {
+  }
+  
+  .social-media a {
     color: var(--accent-color);
     text-decoration: none;
     transition: color 0.3s ease;
     font-size: 18px;
-}
-
-.social-media a:hover {
+  }
+  
+  .social-media a:hover {
     color: var(--secondary-color);
-}
-
-.social-media i {
+  }
+  
+  .social-media i {
     margin-right: 8px;
     color: var(--accent-color);
     font-size: 16px;
-}
-
-.photo-gallery img {
+  }
+  
+  .photo-gallery img {
     width: 60%;
     padding: 0px;
-}
-
-
-header {
-    background-color: var(--primary-color); /* Achtergrondkleur van de header */
-    color: #fff; /* Tekstkleur van de header */
-    padding: 20px 0; /* Padding boven en onder de header */
-    text-align: center; /* Centreert de tekst in de header */
-    border-bottom: 4px solid var(--secondary-color); /* Onderste rand van de header */
-    box-shadow: var(--box-shadow); /* Schaduw van de header */
-    position: sticky; /* Zorgt ervoor dat de header blijft plakken aan de bovenkant bij scrollen */
-    top: 0; /* Plaatst de header aan de bovenkant van de pagina */
-    z-index: 1000; /* Zorgt ervoor dat de header boven andere elementen ligt */
-}
-
-header h1 {
-    margin: 0; /* Verwijdert standaard marge van de h1 */
-    font-size: 2.5em; /* Lettergrootte van de h1 */
-    letter-spacing: 1px; /* Ruimte tussen de letters */
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* Schaduw van de tekst */
-    font-weight: 700; /* Dikte van de tekst */
-}
-
-.logo img {
-    width: 200px; /* Pas de breedte aan naar wens */
-    height: auto; /* Zorgt ervoor dat de hoogte proportioneel blijft */
-    top: 5px; /* Verplaatst het logo naar beneden */
-    /* changes logo position to the left */
+  }
+  
+  header {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    border-bottom: 4px solid var(--secondary-color);
+    box-shadow: var(--box-shadow);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    font-weight: 700;
+  }
+  
+  .logo img {
+    width: 200px;
+    height: auto;
+    top: 5px;
     left: 5px;
     position: absolute;
-}
-
-main {
-    padding: 40px; /* Padding rondom de main content */
-    max-width: 1200px; /* Maximale breedte van de main content */
-    margin: 80px auto; /* Centreert de main content en geeft marge boven en onder */
-    background-color: #fff; /* Achtergrondkleur van de main content */
-    border-radius: var(--border-radius); /* Afgeronde hoeken ingesteld via variabele */
-    box-shadow: var(--box-shadow); /* Schaduw van de main content */
-}
-
-main h2 {
-    color: var(--primary-color); /* Kleur van de h2 */
-    font-size: 2em; /* Lettergrootte van de h2 */
-    margin-bottom: 20px; /* Marge onder de h2 */
-    border-bottom: 2px solid var(--secondary-color); /* Onderste rand van de h2 */
-    padding-bottom: 10px; /* Padding onder de h2 */
-}
-
-main p {
-    font-size: 1.1em; /* Lettergrootte van de paragrafen */
-    margin-bottom: 20px; /* Marge onder de paragrafen */
-}
-
-ul {
-    list-style-type: disc; /* Opsommingsteken voor de lijst */
-    padding-left: 20px; /* Padding links van de lijst */
-}
-
-ul li {
-    background-color:#007a8331 ;/* Achtergrondkleur van de lijstitems */
-    margin-bottom: 10px; /* Marge onder de lijstitems */
-    padding: 15px; /* Padding rondom de lijstitems */
-    border-left: 5px solid var(--secondary-color); /* Linker rand van de lijstitems */
-    border-radius: var(--border-radius); /* Afgeronde hoeken ingesteld via variabele */
-    box-shadow: var(--box-shadow); /* Schaduw van de lijstitems */
-    transition: var(--transition); /* Overgangseffect ingesteld via variabele */
-}
-
-ul li:hover {
-    transform: translateY(-5px); /* Verplaatst het lijstitem omhoog bij hover */
-}
-
-footer {
-    background-color: var(--primary-color); /* Achtergrondkleur van de footer */
-    color: #fff; /* Tekstkleur van de footer */
-    text-align: center; /* Centreert de tekst in de footer */
-    padding: 15px 0; /* Padding boven en onder de footer */
-    position: fixed; /* Zorgt ervoor dat de footer blijft plakken aan de onderkant */
-    bottom: 0; /* Plaatst de footer aan de onderkant van de pagina */
-    width: 100%; /* Zorgt ervoor dat de footer de volledige breedte inneemt */
-    box-shadow: var(--box-shadow); /* Schaduw van de footer */
+  }
+  
+  main {
+    padding: 40px;
+    max-width: 1200px;
+    margin: 80px auto;
+    background-color: #fff;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+  }
+  
+  main h2 {
+    color: var(--primary-color);
+    font-size: 2em;
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 10px;
+  }
+  
+  main p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+  }
+  
+  ul {
+    list-style-type: disc;
+    padding-left: 20px;
+  }
+  
+  ul li {
+    background-color: #007a8331;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-left: 5px solid var(--secondary-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+  }
+  
+  ul li:hover {
+    transform: translateY(-5px);
+  }
+  
+  footer {
+    background-color: var(--primary-color);
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: var(--box-shadow);
     position: sticky;
-}
-
-footer p {
-    margin: 0; /* Verwijdert standaard marge van de paragrafen in de footer */
-}
-
-footer a {
-    color: #fff; /* Kleur van de links in de footer */
-    text-decoration: none; /* Verwijdert standaard onderstreping van de links */
-}
-
-footer a:hover {
-    text-decoration: underline; /* Onderstreept de links bij hover */
-    color: var(--accent-color); /* Verandert de kleur van de links bij hover */
-}
-
-footer img {
-    width: 250px; /* Pas de breedte van de afbeelding aan */
-    height: auto; /* Zorgt ervoor dat de hoogte proportioneel blijft */
-    position: absolute; /* Positioneert de afbeelding absoluut */
-    left: 10px; /* Plaatst de afbeelding 10px van de linkerkant */
-}
-
-.nav-bar {
-    background-color: var(--primary-color); /* Achtergrondkleur van de navigatiebalk */
-    padding: 15px; /* Padding rondom de navigatiebalk */
-    display: flex; /* Flexbox layout voor de navigatiebalk */
-    justify-content: space-between; /* Verdeelt de ruimte tussen de items */
-    align-items: center; /* Centreert de items verticaal */
-    box-shadow: var(--box-shadow); /* Schaduw van de navigatiebalk */
-    position: sticky; /* Zorgt ervoor dat de navigatiebalk blijft plakken aan de bovenkant bij scrollen */
-    top: 0; /* Plaatst de navigatiebalk aan de bovenkant van de pagina */
-    z-index: 1000; /* Zorgt ervoor dat de navigatiebalk boven andere elementen ligt */
-}
-
-.nav-bar a {
-    display: flex; /* Flexbox layout voor de links */
-    align-items: center; /* Centreert de links verticaal */
-    color: #fff; /* Kleur van de links */
-    text-decoration: none; /* Verwijdert standaard onderstreping van de links */
-    margin-left: 10px; /* Ruimte tussen de links */
-    font-weight: 500; /* Dikte van de tekst */
-    transition: var(--transition); /* Overgangseffect ingesteld via variabele */
-}
-
-.nav-bar a:first-child {
-    margin-left: 0; /* Verwijdert de linkermarge voor het eerste item */
-}
-
-.nav-bar a:hover {
-    text-decoration: underline; /* Onderstreept de links bij hover */
-    color: var(--accent-color); /* Verandert de kleur van de links bij hover */
-}
-
-.nav-bar a.active {
-    font-weight: 700; /* Dikte van de tekst voor actieve links */
-}
-
-@media (max-width: 768px) {
-    .nav-bar {
-        flex-direction: column; /* Zet de navigatiebalk items onder elkaar op kleinere schermen */
-    }
-
-    .nav-bar a {
-        margin: 10px 0; /* Ruimte tussen de links op kleinere schermen */
-    }
-
-    main {
-        padding: 20px; /* Vermindert de padding rondom de main content op kleinere schermen */
-    }
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-    .button {
-        min-width: 170px;
-    }
-
-    .footer {
-        flex-direction: column;
-        gap: 30px;
-        text-align: center;
-        width: 100%;
-        margin-top: 20px;
-        border-top: 2px solid var(--secondary-color);
-    }
-
-    .footer .left, .footer .right {
-        align-items: center;
-        text-align: center;
-    }
-
-    .footer .logo {
-        display: block;
-        margin-bottom: 20px;
-        top: 40px; /* Move the logo further down */
-        left: -5px; /* Move the logo a little bit to the left */
-    }
-
-    .topnav a {
-        padding: 10px;
-        font-size: 15px;
-    }
-
-    .header .logo {
-        display: block;
-        left: 125px; /* Move more to the left */
-        top: 10px; /* Move a bit up */
-    }
-
-    .header h1 {
-        visibility: hidden; /* Hide the header text without removing the element */
-    }
-}
-
-@media (max-width: 600px) {
-    .footer {
-        position: relative; /* Change position to relative */
-        flex-direction: column;
-        gap: 30px;
-        text-align: center;
-        width: 100%;
-        margin-top: 20px;
-        border-top: 2px solid var(--secondary-color);
-    }
-
-    .footer .left, .footer .right {
-        align-items: center;
-        text-align: center;
-    }
-
-    .footer .logo {
-        display: block;
-        margin-bottom: 20px;
-        top: 40px; /* Move the logo further down */
-        left: -5px; /* Move the logo a little bit to the left */
-    }
-}
-
-@media (max-width: 800px) {
-    .footer {
-        flex-direction: column; /* Stack items vertically */
-        justify-content: center; /* Center horizontally */
-        align-items: center; /* Center vertically */
-        gap: 20px; /* Add some space between the sections */
-        text-align: center;
-        width: 100%; /* Ensure full width */
-        margin-top: 20px;
-        border-top: 2px solid var(--secondary-color);
-    }
-
-    .footer .left, .footer .right {
-        align-items: center;
-        text-align: center;
-    }
-
-    .topnav a {
-        padding: 10px;
-        font-size: 15px;
-    }
-}
-
-@media (max-width: 1314px) {
-    .header .logo {
-        display: block;
-        left: 125px; /* Move more to the left */
-        top: 10px; /* Move a bit up */
-    }
-
-    .footer .logo {
-        display: block;
-    }
-
-    .header h1 {
-        visibility: hidden; /* Hide the header text without removing the element */
-    }
-}
-
-
-
-
-
-
+  }
+  
+  footer p {
+    margin: 0;
+  }
+  
+  footer a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+    color: var(--accent-color);
+  }
+  
+  footer img {
+    width: 250px;
+    height: auto;
+    position: absolute;
+    left: 10px;
+  }
+  
+  .nav-bar {
+    background-color: var(--primary-color);
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: var(--box-shadow);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .nav-bar a {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    text-decoration: none;
+    margin-left: 10px;
+    font-weight: 500;
+    transition: var(--transition);
+  }
+  
+  .nav-bar a:first-child {
+    margin-left: 0;
+  }
+  
+  .nav-bar a:hover {
+    text-decoration: underline;
+    color: var(--accent-color);
+  }
+  
+  .nav-bar a.active {
+    font-weight: 700;
+  }
+  
+  @media (max-width: 768px) {
+      .topnav {
+          width: 100%; /* Ensure the top navigation bar uses the full width */
+      }
+  
+      .nav-bar {
+          flex-direction: column; /* Zet de navigatiebalk items onder elkaar op kleinere schermen */
+      }
+  
+      .nav-bar a {
+          margin: 10px 0; /* Ruimte tussen de links op kleinere schermen */
+      }
+  
+      main {
+          padding: 20px; /* Vermindert de padding rondom de main content op kleinere schermen */
+      }
+  }
+  
+  @media (min-width: 768px) and (max-width: 1024px) {
+      .button {
+          min-width: 170px;
+      }
+  
+      .footer {
+          flex-direction: column;
+          gap: 30px;
+          text-align: center;
+          width: 100%;
+          margin-top: 20px;
+          border-top: 2px solid var(--secondary-color);
+      }
+  
+      .footer .left,
+      .footer .right {
+          align-items: center;
+          text-align: center;
+      }
+  
+      .footer .logo {
+          display: block;
+          margin-bottom: 20px;
+          top: 40px; /* Move the logo further down */
+          left: -5px; /* Move the logo a little bit to the left */
+      }
+  
+      .topnav a {
+          padding: 10px;
+          font-size: 15px;
+      }
+  
+      .header .logo {
+          display: block;
+          left: 125px; /* Move more to the left */
+          top: 10px; /* Move a bit up */
+      }
+  
+      .header h1 {
+          visibility: hidden; /* Hide the header text without removing the element */
+      }
+  }
+  
+  @media (max-width: 600px) {
+      .footer {
+          position: relative; /* Change position to relative */
+          flex-direction: column;
+          gap: 30px;
+          text-align: center;
+          width: 100%;
+          margin-top: 20px;
+          border-top: 2px solid var(--secondary-color);
+      }
+  
+      .footer .left,
+      .footer .right {
+          align-items: center;
+          text-align: center;
+      }
+  
+      .footer .logo {
+          display: block;
+          margin-bottom: 20px;
+          top: 40px; /* Move the logo further down */
+          left: -5px; /* Move the logo a little bit to the left */
+      }
+  }
+  
+  @media (max-width: 800px) {
+      .footer {
+          flex-direction: column; /* Stack items vertically */
+          justify-content: center; /* Center horizontally */
+          align-items: center; /* Center vertically */
+          gap: 20px; /* Add some space between the sections */
+          text-align: center;
+          width: 100%; /* Ensure full width */
+          margin-top: 20px;
+          border-top: 2px solid var(--secondary-color);
+      }
+  
+      .footer .left,
+      .footer .right {
+          align-items: center;
+          text-align: center;
+      }
+  
+      .topnav a {
+          padding: 10px;
+          font-size: 15px;
+      }
+  }
+  
+  @media (max-width: 1314px) {
+      .header .logo {
+          display: block;
+          left: 125px; /* Move more to the left */
+          top: 10px; /* Move a bit up */
+      }
+  
+      .footer .logo {
+          display: block;
+      }
+  
+      .header h1 {
+          visibility: hidden; /* Hide the header text without removing the element */
+      }
+  }
+  
+  @media (max-width: 1024px) {
+      .topnav {
+          width: 100vw; /* Ensure the top navigation bar uses the full viewport width */
+      }
+  
+      .header {
+          width: 100vw; /* Ensure the header uses the full viewport width */
+      }
+  
+      .footer {
+          width: 100vw; /* Ensure the footer uses the full viewport width */
+      }
+  }
+  
