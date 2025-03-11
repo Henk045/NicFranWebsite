@@ -499,8 +499,8 @@
     .footer .logo {
         display: block;
         margin-bottom: 20px;
-        top: 40px; /* Move the logo further down */
-        left: -5px; /* Move the logo a little bit to the left */
+        top: 25px; /* Move the logo further down */
+        left: 15px; /* Move the logo a little bit to the left */
     }
   }
   
