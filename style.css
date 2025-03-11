@@ -353,7 +353,6 @@ footer {
   text-align: center;
   padding: 15px 0;
   width: 100%;
-  box-shadow:
   box-shadow: var(--box-shadow);
   position: sticky;
 }
