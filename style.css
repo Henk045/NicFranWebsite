@@ -496,7 +496,7 @@ footer img {
 
 @media (max-width: 800px) {
     .footer {
-        display: flex; /* Keep it as a flex container */
+        display: fixed; /* Keep it as a flex container */
         flex-direction: column; /* Stack items vertically */
         justify-content: center; /* Center horizontally */
         align-items: center; /* Center vertically */
