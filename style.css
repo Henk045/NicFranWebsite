@@ -458,18 +458,19 @@ footer img {
 }
 
 @media (max-width: 1314px) {
+
   .topnav {
     width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
   }
 
   .header {
     width: 100vw;
   }
-
-
 
   .footer {
     position: relative;
@@ -501,7 +502,6 @@ footer img {
     font-size: 15px;
   }
 
-
   .header h1 {
     visibility: hidden;
   }
@@ -518,9 +518,8 @@ footer img {
   .button {
     min-width: 170px;
   }
+
   main {
     padding: 20px;
   }
 }
-
-
