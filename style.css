@@ -1,4 +1,5 @@
 /* variables */
+/* variables */
 :root {
     --primary-color: #004d66;
     --secondary-color: #33ffcc;
@@ -8,7 +9,9 @@
     --border-radius: 8px;
     --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     --transition: all 0.3s ease;
+    --fade-color: linear-gradient(to bottom, #00798f, #004d66 );
   }
+  
   
   body {
     display: flex;
@@ -131,7 +134,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(0deg, var(--primary-color), #34495e);
+    background: var(--fade-color);
     color: white;
     padding: 10px;
     font-family: "Verdana", "Geneva", "Tahoma", sans-serif;
