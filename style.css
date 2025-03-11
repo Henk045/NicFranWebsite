@@ -477,7 +477,8 @@ footer img {
         gap: 30px;
         text-align: center;
         width: 100%;
-        margin-top: 20px;
+        height: 100vh; /* Ensure the footer takes the full height of the screen */
+        margin-top: 0; /* Remove the margin-top */
         border-top: 2px solid var(--secondary-color);
     }
 
