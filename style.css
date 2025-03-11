@@ -449,6 +449,7 @@
   @media (max-width: 768px) {
     .topnav {
         width: 100vw; 
+        padding: 0 15px;
     }
   
     .nav-bar {
