@@ -477,8 +477,7 @@ footer img {
         gap: 30px;
         text-align: center;
         width: 100%;
-        height: 100vh; /* Ensure the footer takes the full height of the screen */
-        margin-top: 0; /* Remove the margin-top */
+        margin-top: 20px;
         border-top: 2px solid var(--secondary-color);
     }
 
@@ -503,7 +502,7 @@ footer img {
         align-items: center; /* Center vertically */
         gap: 20px; /* Add some space between the sections */
         text-align: center;
-        width: unset;
+        width: 100%; /* Ensure full width */
         margin-top: 20px;
         border-top: 2px solid var(--secondary-color);
     }
