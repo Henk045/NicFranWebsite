@@ -418,129 +418,130 @@
   }
   
   @media (max-width: 768px) {
-      .topnav {
-          width: 100%; /* Ensure the top navigation bar uses the full width */
-      }
+    .topnav {
+        width: 100vw; /* Ensure the top navigation bar uses the full viewport width */
+    }
   
-      .nav-bar {
-          flex-direction: column; /* Zet de navigatiebalk items onder elkaar op kleinere schermen */
-      }
+    .nav-bar {
+        flex-direction: column; /* Stack navigation bar items vertically on smaller screens */
+        width: 100vw; /* Ensure the nav bar uses the full viewport width */
+    }
   
-      .nav-bar a {
-          margin: 10px 0; /* Ruimte tussen de links op kleinere schermen */
-      }
+    .nav-bar a {
+        margin: 10px 0; /* Space between links on smaller screens */
+    }
   
-      main {
-          padding: 20px; /* Vermindert de padding rondom de main content op kleinere schermen */
-      }
+    main {
+        padding: 20px; /* Reduce padding around main content on smaller screens */
+    }
   }
   
   @media (min-width: 768px) and (max-width: 1024px) {
-      .button {
-          min-width: 170px;
-      }
+    .button {
+        min-width: 170px;
+    }
   
-      .footer {
-          flex-direction: column;
-          gap: 30px;
-          text-align: center;
-          width: 100%;
-          margin-top: 20px;
-          border-top: 2px solid var(--secondary-color);
-      }
+    .footer {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+        width: 100%;
+        margin-top: 20px;
+        border-top: 2px solid var(--secondary-color);
+    }
   
-      .footer .left,
-      .footer .right {
-          align-items: center;
-          text-align: center;
-      }
+    .footer .left,
+    .footer .right {
+        align-items: center;
+        text-align: center;
+    }
   
-      .footer .logo {
-          display: block;
-          margin-bottom: 20px;
-          top: 40px; /* Move the logo further down */
-          left: -5px; /* Move the logo a little bit to the left */
-      }
+    .footer .logo {
+        display: block;
+        margin-bottom: 20px;
+        top: 40px; /* Move the logo further down */
+        left: -5px; /* Move the logo a little bit to the left */
+    }
   
-      .topnav a {
-          padding: 10px;
-          font-size: 15px;
-      }
+    .topnav a {
+        padding: 10px;
+        font-size: 15px;
+    }
   
-      .header .logo {
-          display: block;
-          left: 125px; /* Move more to the left */
-          top: 10px; /* Move a bit up */
-      }
+    .header .logo {
+        display: block;
+        left: 125px; /* Move more to the left */
+        top: 10px; /* Move a bit up */
+    }
   
-      .header h1 {
-          visibility: hidden; /* Hide the header text without removing the element */
-      }
+    .header h1 {
+        visibility: hidden; /* Hide the header text without removing the element */
+    }
   }
   
   @media (max-width: 600px) {
-      .footer {
-          position: relative; /* Change position to relative */
-          flex-direction: column;
-          gap: 30px;
-          text-align: center;
-          width: 100%;
-          margin-top: 20px;
-          border-top: 2px solid var(--secondary-color);
-      }
+    .footer {
+        position: relative; /* Change position to relative */
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+        width: 100%;
+        margin-top: 20px;
+        border-top: 2px solid var(--secondary-color);
+    }
   
-      .footer .left,
-      .footer .right {
-          align-items: center;
-          text-align: center;
-      }
+    .footer .left,
+    .footer .right {
+        align-items: center;
+        text-align: center;
+    }
   
-      .footer .logo {
-          display: block;
-          margin-bottom: 20px;
-          top: 40px; /* Move the logo further down */
-          left: -5px; /* Move the logo a little bit to the left */
-      }
+    .footer .logo {
+        display: block;
+        margin-bottom: 20px;
+        top: 40px; /* Move the logo further down */
+        left: -5px; /* Move the logo a little bit to the left */
+    }
   }
   
   @media (max-width: 800px) {
-      .footer {
-          flex-direction: column; /* Stack items vertically */
-          justify-content: center; /* Center horizontally */
-          align-items: center; /* Center vertically */
-          gap: 20px; /* Add some space between the sections */
-          text-align: center;
-          width: 100%; /* Ensure full width */
-          margin-top: 20px;
-          border-top: 2px solid var(--secondary-color);
-      }
+    .footer {
+        flex-direction: column; /* Stack items vertically */
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+        gap: 20px; /* Add some space between the sections */
+        text-align: center;
+        width: 100%; /* Ensure full width */
+        margin-top: 20px;
+        border-top: 2px solid var(--secondary-color);
+    }
   
-      .footer .left,
-      .footer .right {
-          align-items: center;
-          text-align: center;
-      }
+    .footer .left,
+    .footer .right {
+        align-items: center;
+        text-align: center;
+    }
   
-      .topnav a {
-          padding: 10px;
-          font-size: 15px;
-      }
+    .topnav a {
+        padding: 10px;
+        font-size: 15px;
+    }
   }
   
   @media (max-width: 1314px) {
-      .header .logo {
-          display: block;
-          left: 125px; /* Move more to the left */
-          top: 10px; /* Move a bit up */
-      }
+    .header .logo {
+        display: block;
+        left: 125px; /* Move more to the left */
+        top: 10px; /* Move a bit up */
+    }
   
-      .footer .logo {
-          display: block;
-      }
+    .footer .logo {
+        display: block;
+    }
   
-      .header h1 {
-          visibility: hidden; /* Hide the header text without removing the element */
-      }
+    .header h1 {
+        visibility: hidden; /* Hide the header text without removing the element */
+    }
   }
   
   @media (max-width: 1024px) {
