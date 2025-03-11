@@ -1,10 +1,10 @@
 /* variables */
 :root {
-    --primary-color: #007a83; /* Dark blue */
-    --secondary-color: #19f5c9; /* Green */
-    --background-color: #ecf0f1; /* Light grey */
-    --text-color: #2c3e50; /* Dark blue */
-    --accent-color: #2600ff; /* Red */
+    --primary-color: #004d66; /* Darker blue */
+    --secondary-color: #33ffcc; /* Brighter green */
+    --background-color: #ffffff; /* White */
+    --text-color: #000000; /* Black */
+    --accent-color: #ffffff; /* Bright orange */
     --border-radius: 8px;
     --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     --transition: all 0.3s ease;
@@ -126,6 +126,8 @@ body {
     fill: var(--primary-color);
 }
 
+
+
 .header {
     display: flex;
     flex-direction: column;
@@ -195,7 +197,7 @@ html {
     align-items: flex-start;
     flex-wrap: wrap;
     gap: 40px;
-    position: fixed;
+    position: sticky;
     z-index: 1000;
 }
 
@@ -273,6 +275,7 @@ html {
     padding: 0px;
 }
 
+
 header {
     background-color: var(--primary-color); /* Achtergrondkleur van de header */
     color: #fff; /* Tekstkleur van de header */
@@ -303,13 +306,12 @@ header h1 {
 }
 
 main {
-    flex: 1; /* Allow main content to grow and take available space */
-    padding: 40px; /* Padding around the main content */
-    max-width: 1200px; /* Maximum width of the main content */
-    margin: 80px auto; /* Center the main content and give margin above and below */
-    background-color: #fff; /* Background color of the main content */
-    border-radius: var(--border-radius); /* Rounded corners set via variable */
-    box-shadow: var(--box-shadow); /* Shadow of the main content */
+    padding: 40px; /* Padding rondom de main content */
+    max-width: 1200px; /* Maximale breedte van de main content */
+    margin: 80px auto; /* Centreert de main content en geeft marge boven en onder */
+    background-color: #fff; /* Achtergrondkleur van de main content */
+    border-radius: var(--border-radius); /* Afgeronde hoeken ingesteld via variabele */
+    box-shadow: var(--box-shadow); /* Schaduw van de main content */
 }
 
 main h2 {
@@ -345,14 +347,15 @@ ul li:hover {
 }
 
 footer {
-    background-color: var(--primary-color); /* Background color of the footer */
-    color: #fff; /* Text color of the footer */
-    text-align: center; /* Center the text in the footer */
-    padding: 15px 0; /* Padding above and below the footer */
-    position: absolute; /* Ensure the footer stays at the bottom of the page */
-    bottom: 0; /* Place the footer at the bottom of the page */
-    width: 100%; /* Ensure the footer takes the full width */
-    box-shadow: var(--box-shadow); /* Shadow of the footer */
+    background-color: var(--primary-color); /* Achtergrondkleur van de footer */
+    color: #fff; /* Tekstkleur van de footer */
+    text-align: center; /* Centreert de tekst in de footer */
+    padding: 15px 0; /* Padding boven en onder de footer */
+    position: fixed; /* Zorgt ervoor dat de footer blijft plakken aan de onderkant */
+    bottom: 0; /* Plaatst de footer aan de onderkant van de pagina */
+    width: 100%; /* Zorgt ervoor dat de footer de volledige breedte inneemt */
+    box-shadow: var(--box-shadow); /* Schaduw van de footer */
+    position: sticky;
 }
 
 footer p {
@@ -469,6 +472,7 @@ footer img {
 
 @media (max-width: 600px) {
     .footer {
+        position: relative; /* Change position to relative */
         flex-direction: column;
         gap: 30px;
         text-align: center;
@@ -492,7 +496,6 @@ footer img {
 
 @media (max-width: 800px) {
     .footer {
-        display: fixed; /* Keep it as a flex container */
         flex-direction: column; /* Stack items vertically */
         justify-content: center; /* Center horizontally */
         align-items: center; /* Center vertically */
@@ -529,3 +532,9 @@ footer img {
         visibility: hidden; /* Hide the header text without removing the element */
     }
 }
+
+
+
+
+
+
