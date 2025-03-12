@@ -486,8 +486,8 @@ footer img {
 
   .footer .left,
   .footer .right {
-    align-items: center;
-    text-align: center;
+    align-items: left;
+    text-align: left;
   }
 
   .footer .logo {
@@ -523,3 +523,5 @@ footer img {
     padding: 20px;
   }
 }
+
+
